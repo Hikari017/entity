@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<center>
+    <h1><p th:text="#{welcome}"></p></h1>
+    <span th:text="#{test}"></span>
+    <form action="#" th:action="@{/newform}" th:object="${personObject}" method="post">
+        <p>Imię: <input type="text" th:field="*{name}">
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error ex.</span>
+        </p>
+        <p>Nazwisko: <input type="text" th:field="*{lastname}">
+            <span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Lastname error ex.</span>
+        </p>
+        <p>Wiek: <input type="number" th:field="*{age}">
+            <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error ex.</span>
+        </p>
+        <p>Numer: <input type="text" th:field="*{number}">
+            <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}">number error ex.</span>
+        </p>
+        <p>E-mail: <input type="email" th:field="*{email}">
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">email error ex.</span>
+        </p>
+        <p><button type="submit">Wyślij1</button></p>
+    </form>
+</center>
+</body>
+</html>

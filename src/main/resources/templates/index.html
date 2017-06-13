@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AkademiaKodu</title>
+</head>
+<body>
+<center><h1>Witaj świecie, jestem templatką!</h1>
+    <p th:text="${SomeString=='a'}?'Jest po 16:00' : ' Jest przed 16;00'"></p>
+    <form action="#" th:action="@{/data}" method="post">
+        <input type="text" th:name="name"/>
+
+        <input type="text" th:surname="nazwisko">
+
+        <input type="text " th:age="age">
+        <input type="submit" value="Wyslij">
+    </form>
+</center>
+
+</body>
+</html>

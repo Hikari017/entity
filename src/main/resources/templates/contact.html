@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"   >
+    <title>Formularz kontaktowy</title><center>
+    <form action="#" th:action="@{/form}" th:object="${personObject}"      method="post">
+        <p>Imię: <input type="text" th:field="*{name}"></p>
+        <p>Nazwisko: <input type="text" th:field="*{lastname}"></p>
+        <p>E-mail: <input type="email" th:field="*{email}"></p>
+        <p>Treść wiadomości:<textarea rows="4" cols="50" th:field="*{textarea}"></textarea></p>
+        <p><button type="submit">Wyślij</button> </p>
+    </form>
+</center>
+</head>
+<body>
+
+</body>
+</html>
